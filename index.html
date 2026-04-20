@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Crypto ToDo DApp</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- СТАТУС ПОДКЛЮЧЕНИЯ -->
+<div id="statusBar" class="status-bar" style="display:none"></div>
+
+<div class="container">
+
+<!-- ЛЕВАЯ ПАНЕЛЬ -->
+<div class="form-panel">
+    <h2>Новая задача</h2>
+    <input id="title" placeholder="Название задачи">
+    <select id="category">
+        <option>Учёба</option>
+        <option>Работа</option>
+        <option>Личное</option>
+        <option>Спорт</option>
+        <option>Финансы</option>
+        <option>Покупки</option>
+        <option>Проект</option>
+        <option>Здоровье</option>
+        <option>Развитие</option>
+        <option>Отдых</option>
+    </select>
+    <textarea id="desc" placeholder="Описание"></textarea>
+    <input type="date" id="date">
+    <button class="add-btn" onclick="addTask()">Добавить</button>
+</div>
+
+<!-- ПРАВАЯ ПАНЕЛЬ -->
+<div class="list-panel">
+    <div class="top-bar">
+        <input id="search" placeholder="Поиск..." oninput="renderTasks()">
+        <select id="filterCategory" onchange="renderTasks()">
+            <option value="">Все категории</option>
+            <option>Учёба</option>
+            <option>Работа</option>
+            <option>Личное</option>
+            <option>Спорт</option>
+            <option>Финансы</option>
+            <option>Покупки</option>
+            <option>Проект</option>
+            <option>Здоровье</option>
+            <option>Развитие</option>
+            <option>Отдых</option>
+        </select>
+        <select id="filterDate" onchange="renderTasks()">
+            <option value="">Все даты</option>
+            <option value="near">Ближайшие</option>
+            <option value="far">Дальние</option>
+        </select>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" onclick="setTab('active', event)">В работе</div>
+        <div class="tab" onclick="setTab('done', event)">Выполнено</div>
+        <div class="tab" onclick="setTab('expired', event)">Просрочено</div>
+    </div>
+
+    <div id="tasks"></div>
+</div>
+
+</div>
+
+<!-- ethers.js v6 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

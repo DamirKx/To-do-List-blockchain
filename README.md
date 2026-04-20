@@ -82,7 +82,7 @@ struct Task {
 ### 2. Получить тестовый ETH
 
 Переключись на тестовую сеть **Sepolia** в MetaMask и получи бесплатный ETH через faucet:
-- [sepoliafaucet.com](https://sepoliafaucet.com)
+- [sepoliafaucet.com](https://sepolia-faucet.pk910.de/)
 
 ### 3. Задеплоить смарт-контракт в Remix IDE
 

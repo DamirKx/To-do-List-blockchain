@@ -1,4 +1,4 @@
-const CONTRACT_ADDRESS = "0x8171B955322E84d771e852e069fecE72e0Ee25F7";  // адрес смарт контракта
+const CONTRACT_ADDRESS = "ВАШ_АДРЕС_СМАРТ_КОНТРАКТА";  // адрес смарт контракта
 
 const ABI = [
   "function taskCount() view returns (uint256)",
